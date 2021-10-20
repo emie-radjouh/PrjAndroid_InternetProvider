@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"
+        android:text="Internet Provider"
+        android:textStyle="bold"
+        android:textColor="@color/sage"
+        />
+
+    <TextView
+        android:id="@+id/tvClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Client number:"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:id="@+id/edClientNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvClientNumber"
+        app:layout_constraintLeft_toRightOf="@id/tvClientNumber"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provider: "
+        app:layout_constraintTop_toBottomOf="@id/tvClientNumber"
+        app:layout_constraintStart_toStartOf="@id/tvClientNumber"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+
+        />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvClientNumber"
+        app:layout_constraintStart_toStartOf="@id/edClientNumber"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="-30dp">
+
+        <RadioButton
+            android:id="@+id/rbBell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bell" />
+
+        <RadioButton
+            android:id="@+id/rbVideotron"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videotron" />
+
+        <RadioButton
+            android:id="@+id/rbAcanac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acanac" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nb of Months:"
+        app:layout_constraintTop_toBottomOf="@id/tvProvider"
+        app:layout_constraintStart_toStartOf="@id/tvProvider"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+
+        />
+
+    <EditText
+        android:id="@+id/edNbMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvMonths"
+        app:layout_constraintLeft_toRightOf="@id/tvMonths"
+
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal"
+        app:layout_constraintTop_toBottomOf="@id/tvMonths"
+        app:layout_constraintStart_toStartOf="@id/tvMonths"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        />
+
+    <EditText
+        android:id="@+id/edSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvSubtotal"
+        app:layout_constraintLeft_toRightOf="@id/tvSubtotal"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvTPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tps:"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtotal"
+        app:layout_constraintStart_toStartOf="@id/tvSubtotal"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        />
+
+    <EditText
+        android:id="@+id/edTPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ems="6"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTPS"
+        app:layout_constraintLeft_toRightOf="@id/tvTPS"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvTVQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tvq:"
+        app:layout_constraintTop_toBottomOf="@id/tvTPS"
+        app:layout_constraintStart_toStartOf="@id/tvTPS"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"/>
+
+    <EditText
+        android:id="@+id/editTVQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:ems="6"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTVQ"
+        app:layout_constraintLeft_toRightOf="@id/tvTVQ"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        app:layout_constraintTop_toBottomOf="@id/tvTVQ"
+        app:layout_constraintStart_toStartOf="@id/tvTVQ"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/edTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:ems="6"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTotal"
+        app:layout_constraintLeft_toRightOf="@id/tvTotal"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="@color/sage"
+        />
+
+    <Button
+        android:id="@+id/btnShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show All"
+        app:layout_constraintBottom_toBottomOf="@id/edTotal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/btnSave"
+        android:backgroundTint="@color/sage"
+ />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        app:layout_constraintStart_toEndOf="@id/btnShowAll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/sage"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
